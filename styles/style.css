@@ -1,0 +1,711 @@
+/* FONTES--------------------------------------- */
+/* font-family: "Libre Barcode 128 Text", system-ui; */
+/* font-family: "League Gothic", sans-serif; */
+/* FONTES--------------------------------------- */
+
+/* REFERENCES */
+/* some-hovers-learned-in : https://css-tricks.com/ */
+/* REFERENCES */
+
+/* basic-settings */
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    /* overflow-x: hidden; */
+    /* border: 1px #66ff00 solid; */
+}
+
+body {
+    background: #080808;
+    scroll-behavior: smooth;
+    transition: 1s ease;
+}
+
+.font-libre-barcode {
+    font-family: "Libre Barcode 128 Text", system-ui;
+    font-weight: normal;
+}
+
+.font-league-gothic {
+    font-family: "League Gothic", sans-serif;
+    font-weight: 280;
+}
+
+.symbol {
+    color: #2519aa;
+}
+
+#darkModeButton{
+    background: transparent;
+    padding: 1em;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    border: 1px solid #2519aa;
+    margin-bottom: 0.5em;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+#darkModeButton:hover{
+    border: 1px solid #434343;
+    color: #aeaeae;
+    text-align: start;
+    transition: 0.5s ease;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #111111;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9c9c9c;
+}
+
+::selection{
+    background: #111111;
+    color: #fff;
+}
+
+/* basic-settings */
+
+/* ---------------------first-view---------------------- */
+
+header {
+    width: 100%;
+    cursor: default;
+    background: linear-gradient(to bottom, #181e29, #080808);
+    height: 100vh;
+    transition: 1s ease;
+}
+
+/* left-text-first-view */
+
+.name {
+    text-align: justify;
+    margin: 5em;
+    display: flex;
+    flex-direction: column;
+    font-size: 2em;
+}
+
+.name .myname {
+    font-size: 2em;
+}
+
+.web-developer {
+    color: #626262;
+}
+
+.outline {
+    text-decoration: underline #626262;
+}
+
+.soft-skills {
+    font-size: 1em;
+    margin-top: 3.7em;
+}
+
+.highlight-hover {
+    box-shadow: inset 0 0 0 0 #1e1e1e;
+    color: #626262;
+    text-decoration: none;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    cursor: default;
+}
+
+.highlight-hover:hover {
+    box-shadow: inset 350px 0 0 0 #2519aa;
+    color: #1e1e1e;
+}
+
+/* left-text-first-view */
+
+/* right-text-first-view */
+
+.topics {
+    font-size: 2em;
+    margin: 5em;
+    margin-top: 7.5em;
+}
+
+.highlight-hover2 {
+    position: relative;
+    cursor: default;
+}
+
+.highlight-hover2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #2519aa;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.highlight-hover2:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.topics a {
+    text-decoration: none;
+    color: #626262;
+}
+
+.pointer-cursor {
+    cursor: pointer;
+}
+
+.size-libre-adjust {
+    font-size: 2.5em;
+}
+
+/* right-text-first-view */
+
+.landing-page {
+    display: flex;
+    flex-direction: row;
+    color: #aeaeae;
+}
+
+/* ---------------------first-view---------------------- */
+
+/* ----------------------about-me----------------------- */
+
+.horizontal-division {
+    margin-top: 15em;
+    color: #626262;
+    display: flex;
+    flex-direction: row;
+}
+
+.about-me {
+    width: 40%;
+    margin: auto;
+}
+
+.photo {
+    width: 30%;
+    margin: auto;
+    padding: 1em;
+    border: 1px #fff solid;
+    border-right: 0px;
+}
+
+.photo:hover {
+    border: 1px solid #2519aa;
+    border-right: 1px solid transparent;
+    transition: 0.5s ease;
+}
+
+.about-me h2 {
+    font-size: 4.5em;
+    margin-bottom: 2em;
+    color: #626262;
+    text-shadow: 10px 10px 10px #1e1e1e;
+    cursor: default;
+}
+
+.about-me h2:hover {
+    color: #080808;
+    text-shadow: 2px 2px 2px #2519aa;
+    transition: 0.5s ease;
+}
+
+.about-me p {
+    font-size: 2em;
+    text-align: justify;
+    cursor: default;
+}
+
+.hobbie {
+    box-shadow: inset 0 0 0 0 #1e1e1e;
+    color: #2519aa;
+    text-decoration: none;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    cursor: default;
+}
+
+.hobbie:hover {
+    box-shadow: inset 510px 0 0 0 #2519aa;
+    color: #1e1e1e;
+}
+
+/* ----------------------about-me----------------------- */
+
+/* ----------------------projects----------------------- */
+
+.projects {
+    width: 85%;
+    margin: auto;
+    cursor: default;
+}
+
+.projects h2 {
+    margin-top: 5em;
+    color: #626262;
+    display: flex;
+    justify-content: end;
+    font-size: 4em;
+    margin-bottom: 2em;
+    text-shadow: 10px 10px 10px #1e1e1e;
+}
+
+.projects h2:hover {
+    color: #080808;
+    text-shadow: 2px 2px 2px #2519aa;
+    transition: 0.5s ease;
+}
+
+.card {
+    color: #2519aa;
+    background: url(img/project1.png);
+    filter: brightness(0) saturate(0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 90vh;
+    margin: auto;
+    margin-bottom: 2em;
+}
+
+.card:nth-child(3) {
+    background: url(img/project2.png);
+}
+
+.card:nth-child(4) {
+    background: url(img/project3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card:hover {
+    filter: brightness(1);
+    transition: 2s ease;
+}
+
+.info {
+    padding: 1em;
+    font-size: 1.7em;
+    background: #0e0e0e;
+    border: 10px solid #080808;
+    border-top: 0px;
+    border-left: 0px;
+    width: fit-content;
+    border-radius: 0 0 3px 0;
+}
+
+.info:hover {
+    background: #0e0e0e4c;
+    transition: 0.5s;
+    border: 1px solid #00000017;
+    text-shadow: 1px 1px 2px #080808;
+}
+
+.project-links {
+    width: fit-content;
+    padding: 0.3em;
+    margin: 0.5em;
+}
+
+.project-links a {
+    background: #2519aa;
+    color: #080808;
+    font-family: "League Gothic", sans-serif;
+    text-decoration: none;
+    padding: 0.3em;
+    border: 1px solid #ffffff00;
+}
+
+.project-links a:hover {
+    background: #092ed2;
+    transition: 1s ease;
+    border: 1px solid #00226d;
+}
+
+
+/* ----------------------projects----------------------- */
+
+/* -------------hard-skills-scrolling-text-------------- */
+
+.scrolling-text {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+    cursor: default;
+    background: #00031e;
+}
+
+.text {
+    font-family: "League Gothic", sans-serif;
+    text-transform: uppercase;
+    color: #2519aa;
+}
+
+.text span {
+    margin: 0 40px;
+}
+
+@keyframes animate-text {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+.text {
+    font-size: 3em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #2519aa;
+    animation: animate-text 30s linear infinite;
+}
+
+/* -------------hard-skills-scrolling-text-------------- */
+
+/* ---------------convit-to-my-github-------------------- */
+
+.github-convit {
+    text-align: center;
+    font-size: 3em;
+    margin: 2em;
+    color: #626262;
+    text-shadow: 3px 3px 10px #2519aa;
+    margin-bottom: 5em;
+    cursor: default;
+}
+
+.github-convit a {
+    text-decoration: none;
+    color: #2519aa;
+    border: 1px #ffffff2f solid;
+    padding: 0 0.1em 0 0.1em;
+    display: flex;
+    align-items: center;
+}
+
+.github-convit a:hover {
+    border: 1px solid #07006d;
+    padding: 0 0.5em 0 0.5em;
+    transition: 1s ease;
+}
+
+/* ---------------convit-to-my-github-------------------- */
+
+/* ---------------footer--------------- */
+
+footer {
+    border-top: 1px solid #1e1e1e;
+    padding: 0.5em;
+    cursor: default;
+}
+
+.footer-division a{
+    cursor: pointer;
+}
+
+.footer-division {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-wrap: wrap;
+    /* font-size: 5em; */
+}
+
+.contact {
+    width: 35%;
+    border-right: 1px solid #1e1e1e;
+}
+
+.contact .convinced {
+    font-size: 5em;
+    color: #626262;
+    margin: 1em;
+}
+
+.division {
+    filter: opacity(10%);
+    margin: auto;
+}
+
+.contact a {
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    margin: 2em;
+}
+
+.social-e-site-map {
+    width: 90%;
+    margin: 1em;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 3em;
+    border-left: 1px solid #1e1e1e;
+    border-right: 1px solid #1e1e1e;
+    padding: 1.5em;
+}
+
+.social-media a {
+    font-size: 4em;
+}
+
+.site-map {
+    color: #aeaeae;
+    margin-top: 3em;
+}
+
+.site-map h2 {
+    width: 100%;
+    margin: auto;
+    font-size: 4em;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    border-top: 1px solid #1e1e1e;
+    border-left: 1px solid #1e1e1e;
+}
+
+.site-map h3 {
+    font-size: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 4em;
+    text-decoration: overline #07006d;
+    justify-content: end;
+    border-left: 1px #1e1e1e solid;
+    border-right: 1px #1e1e1e solid;
+    border-bottom: 1px #1e1e1e solid;
+    text-wrap: nowrap;
+}
+
+.site-map h3 a {
+    font-size: 3vw;
+    cursor: default;
+}
+
+
+/* ---------------footer--------------- */
+
+/* ------------------- */
+/* ------------------- */
+/* ------------------- */
+/* responsive-displays */
+
+@media all and (max-width:1000px) {
+    .name {
+        margin: 2em;
+    }
+
+    .topics {
+        margin: 2em;
+    }
+
+    .footer-division {
+        flex-direction: column;
+    }
+
+    .contact {
+        width: 100%;
+    }
+
+    .site-map h3 {
+        border: 0px;
+    }
+
+    .site-map h3 a {
+        font-size: 1.2em;
+    }
+}
+
+@media all and (max-width:740px) {
+    .landing-page {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .topics {
+        margin-top: 0em;
+        font-size: clamp(1.25rem, 0.7927rem + 2.439vw, 1.875rem);
+    }
+
+    .name {
+        font-size: clamp(1.25rem, 0.7927rem + 2.439vw, 1.875rem);
+    }
+
+    .horizontal-division {
+        /* que não é mais horizontal.... */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-me {
+        width: 60%;
+    }
+
+    .photo {
+        margin-top: 5em;
+        width: 50%;
+    }
+
+    .photo:hover {
+        border-top: 1px transparent solid;
+        border-right: 1px solid #2519aa;
+    }
+
+    .card {
+        height: 50vh;
+    }
+
+    .info {
+        font-size: 1.3em;
+        padding: 0.3em;
+    }
+
+    .text {
+        font-size: 1.4em;
+    }
+
+    .github-convit {
+        font-size: 1.5em;
+    }
+
+    .site-map h3 {
+        border: 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .site-map h3 a {
+        font-size: 1em;
+    }
+
+    .contact .convinced {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* responsive-displays */
+
+/* --------dark-mode-------- */
+
+.dark-mode header {
+    background: #c6c6c6;
+    height: 100vh;
+}
+
+.dark-mode {
+    background: #c6c6c6;
+    transition: 1s ease;
+}
+
+.dark-mode .landing-page h2 {
+    color: #000000;
+}
+
+.dark-mode .card {
+    filter: brightness(0) saturate(0) invert(1);
+}
+
+.dark-mode .card:hover {
+    filter: none;
+}
+
+.dark-mode .info {
+    padding: 1em;
+    font-size: 1.7em;
+    background: #929292;
+    border: 10px solid #c6c6c6;
+    border-top: 0px;
+    border-left: 0px;
+    width: fit-content;
+    border-radius: 0 0 3px 0;
+}
+
+.dark-mode .info:hover{
+    background: #ffffff4c;
+    transition: 0.5s;
+    border: 1px solid #ffffff17;
+    text-shadow: 1px 1px 2px #080808;
+}
+
+.dark-mode .scrolling-text{
+    background: #fff;
+}
+
+.dark-mode .text{
+    color: #001155;
+}
+
+.dark-mode .github-convit{
+    color: #1e1e1e;
+}
+
+.dark-mode .github-convit a{
+    border: 1px #0000007e solid;
+}
+
+.dark-mode .github-convit a:hover {
+    border: 1px solid #1e00ff;
+    padding: 0 0.5em 0 0.5em;
+    transition: 1s ease;
+}
+
+.dark-mode .site-map{
+    color: #1e1e1e;
+}
+
+#darkModeButton{
+    background: transparent;
+    padding: 1em;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    border: 1px solid #2519aa;
+    margin-bottom: 0.5em;
+    color: #585858;
+    text-align: center;
+    cursor: pointer;
+}
+
+#darkModeButton:hover{
+    border: 1px solid #0e0e0e;
+    color: #0e0e0e;
+    text-align: start;
+    transition: 0.5s ease;
+}
+
+/* --------dark-mode-------- */
